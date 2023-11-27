@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Dōmori</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="TypeAnnonces">RecyclerView_PA</string>
+    <string-array name="TypeAnnonces_title">
+        <item>Visite</item>
+        <item>Promenade</item>
+        <item>Hébergement</item>
+    </string-array>
+    <string-array name="TypeAnnonces_subtitle">
+        <item>à votre domicile</item>
+        <item>de votre chien</item>
+        <item>chez un gardien</item>
+    </string-array>
+
+</resources>

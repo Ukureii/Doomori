@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorp1_1"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/dock"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@color/colorp1_5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btPost"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@android:color/transparent"
+                android:backgroundTintMode="src_over"
+                app:icon="@drawable/streamline_send_email"
+                app:iconPadding="0dp"
+                app:iconSize="28dp"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/btSearch"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@android:color/transparent"
+                app:icon="@drawable/magnifying_glass_outlined"
+                app:iconPadding="0dp"
+                app:iconSize="29dp"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/btAnimals"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@android:color/transparent"
+                app:icon="@drawable/paw_outlined"
+                app:iconPadding="0dp"
+                app:iconSize="30dp"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/btSettings"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@android:color/transparent"
+                app:icon="@drawable/setting_outlined"
+                app:iconPadding="0dp"
+                app:iconSize="30dp"
+                tools:ignore="ButtonStyle,SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
