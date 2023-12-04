@@ -24,41 +24,65 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/iconPa"
+                android:id="@+id/picMa"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="10dp"
                 android:padding="5dp"
-                android:src="@drawable/outline_account_circle_24"
+                android:src="@drawable/magnifying_glass_filled"
                 android:tint="@color/colorp4_1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/titlePa"
+                android:id="@+id/nameMa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="@string/TypeAnnonces"
+                android:text="@string/MesAnimaux"
                 android:textColor="@color/colorp4_1"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/iconPa"
+                app:layout_constraintStart_toEndOf="@+id/picMa"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/subtitlePa"
+                android:id="@+id/raceMa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginBottom="6dp"
-                android:text="@string/TypeAnnonces"
+                android:text="@string/MesAnimaux"
                 android:textColor="@color/colorp4_1"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/iconPa" />
+                app:layout_constraintStart_toEndOf="@+id/picMa" />
+
+            <TextView
+                android:id="@+id/virgule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="@string/virgule"
+                android:textColor="@color/colorp4_1"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/raceMa" />
+
+            <TextView
+                android:id="@+id/ageMa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="6dp"
+                android:text="@string/MesAnimaux"
+                android:textColor="@color/colorp4_1"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/virgule" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

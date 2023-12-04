@@ -15,4 +15,120 @@
         <item>chez un gardien</item>
     </string-array>
 
+    <string name="pageTitre_PA">Déposer une annonce</string>
+    <string name="pageTitre_AR">Recherche</string>
+    <string name="pageTitre_MA">Mes animaux</string>
+    <string name="pageTitre_S">Réglages</string>
+
+    <string name="MesAnimaux">RecyclerView_MA</string>
+    <string-array name="MesAnimaux_nom">
+        <item>Tanji</item>
+        <item>Pillow</item>
+        <item>Leona</item>
+        <item>Loki</item>
+    </string-array>
+    <string-array name="MesAnimaux_race">
+        <item>Dogue du Tibet</item>
+        <item>Mainecoon</item>
+        <item>Européen</item>
+        <item>Européen</item>
+    </string-array>
+    <string-array name="MesAnimaux_age">
+        <item>1 an</item>
+        <item>4 an</item>
+        <item>6 mois</item>
+        <item>4 mois</item>
+    </string-array>
+
+    <string name="AnnoncesRecherche">RecyclerView_AR</string>
+    <string name="virgule">,</string>
+    <string-array name="AnnoncesRecherche_title">
+        <item>Marie J.</item>
+        <item>Esteban Mlt</item>
+        <item>Fanny Levett</item>
+        <item>Sylvia Brugière</item>
+        <item>Florentin D</item>
+        <item>Laëtitia Bonnot</item>
+        <item>Antoine Bousquet</item>
+        <item>Louise Castillon</item>
+        <item>Elise Delsarte</item>
+        <item>Maxence Rigal</item>
+        <item>Damien Cuvillier</item>
+        <item>Julia Bechard</item>
+        <item>Manon Dvrx</item>
+        <item>Thomas Paquin</item>
+        <item>Julien Donzé</item>
+    </string-array>
+    <string-array name="AnnoncesRecherche_subtitle">
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+        <item>Description</item>
+    </string-array>
+    <string-array name="AnnoncesRecherche_prix">
+        <item>8€</item>
+        <item>10€</item>
+        <item>9.5€</item>
+        <item>20€</item>
+        <item>11€</item>
+        <item>10€</item>
+        <item>13€</item>
+        <item>21€</item>
+        <item>10.1€</item>
+        <item>8.9€</item>
+        <item>20.2€</item>
+        <item>6€</item>
+        <item>10.4€</item>
+        <item>9€</item>
+        <item>22€</item>
+    </string-array>
+    <string-array name="AnnoncesRecherche_txt">
+        <item>par heure</item>
+        <item>par nuit</item>
+        <item>par heure</item>
+        <item>par jour</item>
+        <item>par heure</item>
+        <item>par heure</item>
+        <item>par nuit</item>
+        <item>par heure</item>
+        <item>par jour</item>
+        <item>par nuit</item>
+        <item>par heure</item>
+        <item>par jour</item>
+        <item>par heure</item>
+        <item>par nuit</item>
+        <item>par jour</item>
+    </string-array>
+
+    <string name="Reglages">RecyclerView_R</string>
+    <string-array name="Reglages_title">
+        <item>Profil</item>
+        <item>Mes animaux</item>
+        <item>Devenir un.e gardien.ne</item>
+        <item>Paiements</item>
+        <item>Centre d\'aide</item>
+        <item>Service client</item>
+    </string-array>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+
 </resources>

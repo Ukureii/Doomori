@@ -10,8 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.squareup.picasso.Picasso;
-
 import java.util.ArrayList;
 
 public class paAdapter extends RecyclerView.Adapter<paAdapter.paViewHolder> {
@@ -33,14 +31,14 @@ public class paAdapter extends RecyclerView.Adapter<paAdapter.paViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull paViewHolder holder, int position) {
         PosterAnnonce pa = this.liste.get(position);
-        holder.text1.setText((CharSequence) pa.getText1());
-        holder.text2.setText((CharSequence) pa.getText2());
-        Picasso.get().load("pa.getIcon()").into(holder.icon);
+        holder.text1.setText(pa.getTitle());
+        holder.text2.setText(pa.getSubtitle());
+        holder.icon.setImageResource(pa.getIcon());
     }
 
     @Override
     public int getItemCount() {
-        return this.liste.size();
+        return liste.size();
     }
 
     public static class paViewHolder extends RecyclerView.ViewHolder {
@@ -50,9 +48,9 @@ public class paAdapter extends RecyclerView.Adapter<paAdapter.paViewHolder> {
         public paViewHolder(View v) {
             super(v);
 
-            icon = v.findViewById(R.id.paIMG);
-            text1 = v.findViewById(R.id.paTXT1);
-            text2 = v.findViewById(R.id.paTXT2);
+            icon = v.findViewById(R.id.iconPa);
+            text1 = v.findViewById(R.id.titlePa);
+            text2 = v.findViewById(R.id.subtitlePa);
 
         }
     }
