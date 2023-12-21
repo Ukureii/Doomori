@@ -2,20 +2,60 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#D8D8D8</color>
+    <color name="transparent"></color>
 
-    <color name="colorp1_5">#001a23</color>
-    <color name="colorp1_4">#31493c</color>
-    <color name="colorp1_3">#7a9e7e</color>
-    <color name="colorp1_2">#b3efb2</color>
-    <color name="colorp1_1">#e8f1f2</color>
+    <color name="Gris1">#7d8597</color>
 
-    <color name="colorp3_4">#e2e5ec</color>
-    <color name="colorp3_3">#b9c4d5</color>
-    <color name="colorp3_2">#587175</color>
-    <color name="colorp3_1">#32444e</color>
+    <color name="Vert1">#132a13</color>
+    <color name="Vert2">#31572c</color>
+    <color name="Vert3">#4f772d</color>
+    <color name="Vert4">#90a955</color>
+    <color name="Vert5">#E2E5B7</color>
 
-    <color name="colorp4_4">#dad5b5</color>
-    <color name="colorp4_3">#eadc76</color>
-    <color name="colorp4_2">#b7d9c9</color>
-    <color name="colorp4_1">#001a23</color>
+    <color name="Vert6">#718355</color>
+    <color name="Vert7">#87986a</color>
+    <color name="Vert8">#97a97c</color>
+    <color name="Vert9">#b5c99a</color>
+    <color name="Vert10">#cfe1b9</color>
+    <color name="Vert11">#e9f5db</color>
+
+    <color name="Vert12">#dde5b6</color>
+
+    <color name="Bleu1">#051923</color>
+    <color name="Bleu2">#012a4a</color>
+    <color name="Bleu3">#013a63</color>
+    <color name="Bleu4">#01497c</color>
+    <color name="Bleu5">#014f86</color>
+    <color name="Bleu6">#2a6f97</color>
+    <color name="Bleu7">#2c7da0</color>
+    <color name="Bleu8">#468faf</color>
+    <color name="Bleu9">#61a5c2</color>
+    <color name="Bleu10">#89c2d9</color>
+    <color name="Bleu11">#a9d6e5</color>
+    <color name="Bleu12">#b6ccfe</color>
+    <color name="Bleu13">#abc4ff</color>
+    <color name="Bleu14">#edf2fb</color>
+    <color name="Bleu15">#e2eafc</color>
+    <color name="Bleu16">#F7FAFF</color>
+
+    <color name="Palette1_1">#FFD275</color>
+    <color name="Palette1_2">#E8AE68</color>
+    <color name="Palette1_3">#A57F60</color>
+    <color name="Palette1_4">#E3A587</color>
+    <color name="Palette1_5">#DB5A42</color>
+
+    <color name="Palette2_1">#CBD4C2</color>
+    <color name="Palette2_2">#DBEBC0</color>
+    <color name="Palette2_3">#C3B299</color>
+    <color name="Palette2_4">#815355</color>
+    <color name="Palette2_5">#523249</color>
+
+    <color name="Palette3bonus">#F6F9FB</color>
+    <color name="Palette3_1">#AFD2E9</color>
+    <color name="Palette3_2">#F2F3D9</color>
+    <color name="Palette3_3">#A57F60</color>
+    <color name="Palette3_4">#15616D</color>
+    <color name="Palette3_5">#001524</color>
+
 </resources>

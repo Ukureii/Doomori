@@ -5,15 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        app:cardBackgroundColor="@color/colorp4_2"
         app:cardCornerRadius="15dp"
-        app:cardElevation="0dp"
+        app:cardElevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,10 +37,10 @@
                 android:layout_marginStart="10dp"
                 android:padding="5dp"
                 android:src="@drawable/outline_account_circle_24"
-                android:tint="@color/colorp4_1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/Palette3_4" />
 
             <TextView
                 android:id="@+id/titlePa"
@@ -42,9 +49,8 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/TypeAnnonces"
-                android:textColor="@color/colorp4_1"
+                android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/iconPa"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,7 +61,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginBottom="6dp"
                 android:text="@string/TypeAnnonces"
-                android:textColor="@color/colorp4_1"
+                android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/iconPa" />

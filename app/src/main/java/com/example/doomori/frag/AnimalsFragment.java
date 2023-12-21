@@ -1,7 +1,9 @@
 package com.example.doomori.frag;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,12 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
-import com.example.doomori.AnnoncesRecherche;
-import com.example.doomori.MesAnimaux;
+import com.example.doomori.MyAnimalsActivity;
+import com.example.doomori.objects.MesAnimaux;
 import com.example.doomori.R;
-import com.example.doomori.arAdapter;
-import com.example.doomori.maAdapter;
+import com.example.doomori.adapters.maAdapter;
 import com.example.doomori.rvInterface;
 
 import java.util.ArrayList;
@@ -22,8 +24,9 @@ import java.util.ArrayList;
 public class AnimalsFragment extends Fragment implements rvInterface {
 
     private RecyclerView recyclerView;
+    private CardView plusMA;
     private ArrayList<MesAnimaux> mesAnimaux = new ArrayList<>();
-    private int[] mesAnimauxIMG = {R.drawable.paws, R.drawable.paws, R.drawable.paws, R.drawable.paws};
+    private int[] mesAnimauxIMG = {R.drawable.two_paws, R.drawable.two_paws, R.drawable.two_paws, R.drawable.two_paws};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,6 +39,17 @@ public class AnimalsFragment extends Fragment implements rvInterface {
         setUpMesAnimaux();
 
         maAdapter adapter = new maAdapter(mesAnimaux, this.getContext());
+
+        plusMA = view.findViewById(R.id.btPlus);
+        plusMA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), MyAnimalsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         recyclerView.setAdapter(adapter);
 
         return view;

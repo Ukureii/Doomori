@@ -2,12 +2,7 @@ package com.example.doomori;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Adapter;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -16,8 +11,8 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.doomori.databinding.ActivityMainBinding;
 import com.example.doomori.frag.AnimalsFragment;
 import com.example.doomori.frag.AnnonceFragment;
-import com.example.doomori.frag.MagnifyingFragment;
-import com.example.doomori.frag.SettingsFragment;
+import com.example.doomori.frag.ProfileFragment;
+import com.example.doomori.frag.AVenirFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,13 +29,13 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
             if (item.getItemId() == R.id.send) {
-                replaceFragment(new AnnonceFragment());
+                replaceFragment(new AVenirFragment());
             } else if (item.getItemId() == R.id.search) {
-                replaceFragment(new MagnifyingFragment());
+                replaceFragment(new AnnonceFragment());
             } else if (item.getItemId() == R.id.animals) {
                 replaceFragment(new AnimalsFragment());
-            } else if (item.getItemId() == R.id.settings) {
-                replaceFragment(new SettingsFragment());
+            } else if (item.getItemId() == R.id.profile) {
+                replaceFragment(new ProfileFragment());
             }
             return true;
         });

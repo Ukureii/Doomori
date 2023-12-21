@@ -111,15 +111,20 @@
         <item>par jour</item>
     </string-array>
 
-    <string name="Reglages">RecyclerView_R</string>
-    <string-array name="Reglages_title">
-        <item>Profil</item>
-        <item>Mes animaux</item>
-        <item>Devenir un.e gardien.ne</item>
-        <item>Paiements</item>
-        <item>Centre d\'aide</item>
-        <item>Service client</item>
+    <string name="Agenda">RecyclerView_AV</string>
+    <string-array name="Agenda_title">
+        <item>*garde à venir*</item>
     </string-array>
+
+    <string name="Profile">RecyclerView_P</string>
+    <string-array name="Profile_title">
+        <item>Vos coordonnées</item>
+        <item>Vos animaux</item>
+        <item>Paiements</item>
+        <item>Notifications</item>
+        <item>Mode vacances</item>
+    </string-array>
+
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -129,6 +134,44 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="publierdispo">Devenir gardien</string>
+    <string name="trouver_un_gardien">Trouver un gardien</string>
+    <string name="mes_animaux">Mes animaux</string>
+    <string name="poster_une_annonce">Poster une annonce</string>
+    <string name="myanimals">myAnimals</string>
+    <string name="post">post</string>
+    <string name="search">search</string>
+    <string name="profile">profile</string>
+    <string name="ajouter_un_animal">Ajouter un animal</string>
+    <string name="lb_add_animal">Veuillez fournir une description de votre animal</string>
+    <string name="type_danimal">Type d\'animal</string>
+    <string name="date_de_naissance">Date de naissance</string>
+    <string name="nom">Nom</string>
+    <string name="race">Race</string>
+    <string name="croisement">Spécifier \"croisé\" si l\'animal est issu d\'un croisement</string>
+    <string name="sexe">Sexe</string>
+    <string name="rbchat">Chat</string>
+    <string name="rbchien">Chien</string>
+    <string name="rbfemelle">Femelle</string>
+    <string name="rbmale">Mâle</string>
+    <string name="rbnac">NAC</string>
+    <string name="rbreptile">Reptile</string>
+    <string name="lbpoids">Poids</string>
+    <string name="jj_mm_aaaa">jj/mm/aaaa</string>
+    <string name="en_kg">en Kg</string>
+    <string name="depend">Ça dépend</string>
+    <string name="non">Non</string>
+    <string name="pas_sur">Pas sûr</string>
+    <string name="oui">Oui</string>
+    <string name="amical_animaux_YoN">Amical avec les autres animaux ?</string>
+    <string name="amical_enfants_YoN">Amical avec les enfants ?</string>
+    <string name="type_identification">Type d\'identification</string>
+    <string name="est_il_propre">Est-il propre ?</string>
+    <string name="sterilisation">Est-il stérilisé / castré ?</string>
+    <string name="informations_complementaires">Informations complémentaires</string>
+    <string name="puce">Puce</string>
+    <string name="tatouage">Tatouage</string>
+    <string name="aucun">Aucun</string>
 
 
 </resources>

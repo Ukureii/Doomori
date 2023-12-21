@@ -10,10 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.doomori.AnnoncesRecherche;
-import com.example.doomori.PosterAnnonce;
+import com.example.doomori.objects.AnnoncesRecherche;
 import com.example.doomori.R;
-import com.example.doomori.arAdapter;
+import com.example.doomori.adapters.arAdapter;
 import com.example.doomori.rvInterface;
 
 import java.util.ArrayList;
@@ -28,7 +27,7 @@ public class MagnifyingFragment extends Fragment implements rvInterface {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_magnifying, container, false);
 
-        recyclerView = view.findViewById(R.id.arRecyclerView);
+        //recyclerView = view.findViewById(R.id.dgRecyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 

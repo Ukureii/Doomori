@@ -5,15 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        app:cardBackgroundColor="@color/colorp4_2"
         app:cardCornerRadius="15dp"
-        app:cardElevation="0dp"
+        app:cardElevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,10 +37,10 @@
                 android:layout_marginStart="10dp"
                 android:padding="5dp"
                 android:src="@drawable/magnifying_glass_filled"
-                android:tint="@color/colorp4_1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/Palette3_4" />
 
             <TextView
                 android:id="@+id/nameMa"
@@ -42,7 +49,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/MesAnimaux"
-                android:textColor="@color/colorp4_1"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/picMa"
@@ -55,7 +62,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginBottom="6dp"
                 android:text="@string/MesAnimaux"
-                android:textColor="@color/colorp4_1"
+                android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/picMa" />
@@ -66,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
                 android:text="@string/virgule"
-                android:textColor="@color/colorp4_1"
+                android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/raceMa" />
@@ -78,7 +85,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="6dp"
                 android:text="@string/MesAnimaux"
-                android:textColor="@color/colorp4_1"
+                android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/virgule" />

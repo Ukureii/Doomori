@@ -14,13 +14,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/titleAR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
             android:paddingTop="10dp"
             android:paddingBottom="5dp"
-            android:text="Poster une annonce"
+            android:text="@string/poster_une_annonce"
             android:textSize="26dp" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -33,7 +33,7 @@
             android:layout_marginBottom="1dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title" />
+            app:layout_constraintTop_toBottomOf="@id/titleAR" />
     </LinearLayout>
 
 </FrameLayout>
