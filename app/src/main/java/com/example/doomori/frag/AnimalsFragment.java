@@ -3,6 +3,7 @@ package com.example.doomori.frag;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,21 +19,24 @@ import com.example.doomori.objects.MesAnimaux;
 import com.example.doomori.R;
 import com.example.doomori.adapters.maAdapter;
 import com.example.doomori.rvInterface;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class AnimalsFragment extends Fragment implements rvInterface {
 
     private RecyclerView recyclerView;
-    private CardView plusMA;
+    private FloatingActionButton plusMA;
     private ArrayList<MesAnimaux> mesAnimaux = new ArrayList<>();
-    private int[] mesAnimauxIMG = {R.drawable.two_paws, R.drawable.two_paws, R.drawable.two_paws, R.drawable.two_paws};
+    private int mesAnimauxIMG = R.drawable.two_paws;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_animals, container, false);
 
         recyclerView = view.findViewById(R.id.maRecyclerView);
+        plusMA = view.findViewById(R.id.btPlus);
+
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
@@ -40,7 +44,6 @@ public class AnimalsFragment extends Fragment implements rvInterface {
 
         maAdapter adapter = new maAdapter(mesAnimaux, this.getContext());
 
-        plusMA = view.findViewById(R.id.btPlus);
         plusMA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +64,7 @@ public class AnimalsFragment extends Fragment implements rvInterface {
         String[] maAge = getResources().getStringArray(R.array.MesAnimaux_age);
 
         for(int i  = 0 ; i < maNom.length ; i++) {
-            mesAnimaux.add(new MesAnimaux(maNom[i], maRace[i], maAge[i], mesAnimauxIMG[i]));
+            mesAnimaux.add(new MesAnimaux(maNom[i], maRace[i], maAge[i], mesAnimauxIMG));
         }
     }
 

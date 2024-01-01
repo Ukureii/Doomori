@@ -14,6 +14,11 @@
         <item>de votre chien</item>
         <item>chez un gardien</item>
     </string-array>
+    <string-array name="TypeAnnonces_desc">
+        <item>Rendez visite aux animaux directement chez eux.</item>
+        <item>Choisissez les promenades de chien adaptées à votre emploi du temps.</item>
+        <item>Prenez soin d\'un animal chez vous pour une durée déterminée.</item>
+    </string-array>
 
     <string name="pageTitre_PA">Déposer une annonce</string>
     <string name="pageTitre_AR">Recherche</string>
@@ -26,18 +31,48 @@
         <item>Pillow</item>
         <item>Leona</item>
         <item>Loki</item>
+        <item>Uriel</item>
+        <item>Tryx</item>
+        <item>Igloo</item>
+        <item>Jana</item>
+        <item>Iago</item>
+        <item>Joey</item>
+        <item>Saiko</item>
+        <item>Tess</item>
+        <item>Naru</item>
+        <item>Natsu</item>
     </string-array>
     <string-array name="MesAnimaux_race">
         <item>Dogue du Tibet</item>
         <item>Mainecoon</item>
         <item>Européen</item>
         <item>Européen</item>
+        <item>Border collie</item>
+        <item>Border collie</item>
+        <item>Bichon frisé</item>
+        <item>Yorkshire</item>
+        <item>Yorkshire</item>
+        <item>Jack russel</item>
+        <item>Beagle harrier</item>
+        <item>Malinois</item>
+        <item>Européen</item>
+        <item>Shiba inu</item>
     </string-array>
     <string-array name="MesAnimaux_age">
         <item>1 an</item>
         <item>4 an</item>
         <item>6 mois</item>
         <item>4 mois</item>
+        <item>6 mois</item>
+        <item>1 an et demi</item>
+        <item>7 ans</item>
+        <item>9 ans</item>
+        <item>8 ans</item>
+        <item>2 mois</item>
+        <item>2 ans</item>
+        <item>1 an et demi</item>
+        <item>5 ans</item>
+        <item>4 ans</item>
     </string-array>
 
     <string name="AnnoncesRecherche">RecyclerView_AR</string>
@@ -125,17 +160,8 @@
         <item>Mode vacances</item>
     </string-array>
 
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
     <string name="publierdispo">Devenir gardien</string>
-    <string name="trouver_un_gardien">Trouver un gardien</string>
+    <string name="trouver_un_gardien">Les services de pet-sitting</string>
     <string name="mes_animaux">Mes animaux</string>
     <string name="poster_une_annonce">Poster une annonce</string>
     <string name="myanimals">myAnimals</string>
@@ -163,7 +189,7 @@
     <string name="non">Non</string>
     <string name="pas_sur">Pas sûr</string>
     <string name="oui">Oui</string>
-    <string name="amical_animaux_YoN">Amical avec les autres animaux ?</string>
+    <string name="amical_animaux_YoN">Votre animal est amical avec :</string>
     <string name="amical_enfants_YoN">Amical avec les enfants ?</string>
     <string name="type_identification">Type d\'identification</string>
     <string name="est_il_propre">Est-il propre ?</string>
@@ -172,6 +198,29 @@
     <string name="puce">Puce</string>
     <string name="tatouage">Tatouage</string>
     <string name="aucun">Aucun</string>
+    <string name="msg_entente">Si nécessaire, précisez ici les informations complémentaires à l\'entente de votre animal avec les autres animaux et les enfants</string>
+    <string name="informations_pour_la_garde">Informations pour la garde</string>
+    <string name="horaires_des_pauses_pipi">Horaires des pauses pipi</string>
+    <string name="toutes_les_heures">Toutes les heures</string>
+    <string name="_2_heures">2 heures</string>
+    <string name="_4_heures">4 heures</string>
+    <string name="_4_8_heures">4 à 8 heures</string>
+    <string name="niveau_d_nergie">Niveau d\'énergie</string>
+    <string name="lev">Élevé</string>
+    <string name="mod_r">Modéré</string>
+    <string name="faible">Faible</string>
+    <string name="horaires_des_repas">Horaires des repas</string>
+    <string name="le_matin">Le matin</string>
+    <string name="_2_fois_par_jour">2 fois par jour</string>
+    <string name="le_soir">Le soir</string>
+    <string name="peut_tre_laiss_seul">Peut être laissé seul</string>
+    <string name="_1_heure"><![CDATA[< 1 heure]]></string>
+    <string name="_1_4_heures">1 à 4 heures</string>
+    <string name="prend_il_des_m_dicaments">Prend-il des médicaments ?</string>
+    <string name="msg_garde">Si nécessaire, précisez ici les informations complémentaires pour la garde de votre animal</string>
+    <string name="informations_compl_mentaires">Informations complémentaires</string>
+    <string name="msg_medic">Si votre animal suit un traitement, précisez ici le nom du (des) traitement(s)</string>
+    <string name="informations_sur_votre_animal">Informations sur votre animal</string>
 
 
 </resources>

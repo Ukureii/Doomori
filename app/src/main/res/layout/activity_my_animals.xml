@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/white"
     tools:context=".frag.AnimalsFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -18,7 +17,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="-20dp"
+            android:layout_marginTop="18dp"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
@@ -43,24 +43,17 @@
                 android:textSize="26sp" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/lbAddAnimal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:text="@string/lb_add_animal" />
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cvFormulaire"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="6dp"
             android:layout_marginBottom="15dp"
             app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="15dp">
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -72,22 +65,35 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
-                    android:text="@string/informations_complementaires"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/informations_sur_votre_animal"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/infos_animal" />
 
                 <TextView
                     android:id="@+id/lbEspece"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:text="@string/type_danimal"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/infos_animal" />
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
 
                 <RadioGroup
                     android:id="@+id/rgEspece"
@@ -322,20 +328,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rgSexe" />
 
-                <EditText
-                    android:id="@+id/tfRace"
-                    android:layout_width="match_parent"
-                    android:layout_height="38dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:background="@drawable/custom_tf_stroke"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lbRaceMsg" />
-
                 <TextView
                     android:id="@+id/lbRaceMsg"
                     android:layout_width="match_parent"
@@ -350,39 +342,71 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/lbRace" />
 
-                <View
-                    android:id="@+id/view"
+                <EditText
+                    android:id="@+id/tfRace"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="6dp"
-                    android:background="@color/gray"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/custom_tf_stroke"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbRaceMsg" />
+
+                <TextView
+                    android:id="@+id/lbDateAdoption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Date de l'adoption"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tfRace" />
 
-                <TextView
-                    android:id="@+id/infos_complementaires"
+                <EditText
+                    android:id="@+id/tfDateAdoption"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="15dp"
-                    android:text="@string/informations_complementaires"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/custom_tf_stroke"
+                    android:hint="@string/jj_mm_aaaa"
+                    android:inputType="date"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view" />
+                    app:layout_constraintTop_toBottomOf="@+id/lbDateAdoption" />
 
                 <TextView
                     android:id="@+id/lb_identif"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
                     android:text="@string/type_identification"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/infos_complementaires" />
+                    app:layout_constraintTop_toBottomOf="@+id/tfDateAdoption" />
+
+                <TextView
+                    android:id="@+id/lb_identif_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Puce ou tatouage obligatoire, nous n'acceptons pas l'inscription d'un animal non identifié"
+                    android:textColor="#9A9A9A"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lb_identif" />
 
                 <RadioGroup
                     android:id="@+id/rgIdentif"
@@ -394,7 +418,7 @@
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lb_identif">
+                    app:layout_constraintTop_toBottomOf="@+id/lb_identif_msg">
 
                     <RadioButton
                         android:id="@+id/rbIdentifPuce"
@@ -405,8 +429,8 @@
                         android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:text="@string/puce"
-                        android:textColor="@drawable/custom_rb_textcolor"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
 
                     <RadioButton
                         android:id="@+id/rbIdentifTattoo"
@@ -417,29 +441,18 @@
                         android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:text="@string/tatouage"
-                        android:textColor="@drawable/custom_rb_textcolor"
-                        android:textAlignment="center" />
-
-                    <RadioButton
-                        android:id="@+id/rbNoIdentif"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/custom_rb_selector"
-                        android:button="@color/transparent"
-                        android:text="@string/aucun"
-                        android:textColor="@drawable/custom_rb_textcolor"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
                 </RadioGroup>
 
                 <TextView
                     android:id="@+id/lb_steri"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="28dp"
                     android:text="@string/sterilisation"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rgIdentif" />
 
@@ -453,40 +466,41 @@
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lb_steri" >
+                    app:layout_constraintTop_toBottomOf="@+id/lb_steri">
 
-                <RadioButton
-                    android:id="@+id/rbSteriYes"
-                    android:layout_width="45dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/custom_rb_selector"
-                    android:button="@color/transparent"
-                    android:text="@string/oui"
-                    android:textColor="@drawable/custom_rb_textcolor"
-                    android:textAlignment="center" />
+                    <RadioButton
+                        android:id="@+id/rbSteriYes"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
+                        android:button="@color/transparent"
+                        android:text="@string/oui"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
 
-                <RadioButton
-                    android:id="@+id/rbSteriNo"
-                    android:layout_width="45dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/custom_rb_selector"
-                    android:button="@color/transparent"
-                    android:text="@string/non"
-                    android:textColor="@drawable/custom_rb_textcolor"
-                    android:textAlignment="center" />
+                    <RadioButton
+                        android:id="@+id/rbSteriNo"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
+                        android:button="@color/transparent"
+                        android:text="@string/non"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
                 </RadioGroup>
 
                 <TextView
                     android:id="@+id/lb_propre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="28dp"
                     android:text="@string/est_il_propre"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rgSteri" />
 
@@ -500,7 +514,7 @@
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lb_propre" >
+                    app:layout_constraintTop_toBottomOf="@+id/lb_propre">
 
                     <RadioButton
                         android:id="@+id/rbPropreYes"
@@ -511,8 +525,8 @@
                         android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:text="@string/oui"
-                        android:textColor="@drawable/custom_rb_textcolor"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
 
                     <RadioButton
                         android:id="@+id/rbPropreNo"
@@ -523,8 +537,8 @@
                         android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:text="@string/non"
-                        android:textColor="@drawable/custom_rb_textcolor"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
 
                     <RadioButton
                         android:id="@+id/rbProprePasSur"
@@ -535,8 +549,8 @@
                         android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:text="@string/pas_sur"
-                        android:textColor="@drawable/custom_rb_textcolor"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
 
                     <RadioButton
                         android:id="@+id/rbPropreDepend"
@@ -547,17 +561,18 @@
                         android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:text="@string/depend"
-                        android:textColor="@drawable/custom_rb_textcolor"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
                 </RadioGroup>
 
                 <TextView
                     android:id="@+id/lb_enfants"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="28dp"
                     android:text="@string/amical_enfants_YoN"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rgPropre" />
 
@@ -571,7 +586,7 @@
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lb_enfants" >
+                    app:layout_constraintTop_toBottomOf="@+id/lb_enfants">
 
                     <RadioButton
                         android:id="@+id/rbEnfantsYes"
@@ -582,8 +597,8 @@
                         android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:text="@string/oui"
-                        android:textColor="@drawable/custom_rb_textcolor"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
 
                     <RadioButton
                         android:id="@+id/rbEnfantsNo"
@@ -594,8 +609,8 @@
                         android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:text="@string/non"
-                        android:textColor="@drawable/custom_rb_textcolor"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
 
                     <RadioButton
                         android:id="@+id/rbEnfantsPasSur"
@@ -606,8 +621,8 @@
                         android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:text="@string/pas_sur"
-                        android:textColor="@drawable/custom_rb_textcolor"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
 
                     <RadioButton
                         android:id="@+id/rbEnfantsDepend"
@@ -618,95 +633,408 @@
                         android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:text="@string/depend"
-                        android:textColor="@drawable/custom_rb_textcolor"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
                 </RadioGroup>
 
                 <TextView
                     android:id="@+id/lb_animaux"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="28dp"
                     android:text="@string/amical_animaux_YoN"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rgEnfants" />
 
                 <LinearLayout
+                    android:id="@+id/llAmical"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_marginStart="1dp"
                     android:layout_marginTop="1dp"
                     android:layout_marginEnd="1dp"
-                    app:layout_constraintTop_toBottomOf="@id/lb_animaux"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:orientation="horizontal">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lb_animaux">
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_margin="4dp"
                         android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:drawableTop="@drawable/rb_cat"
-                        android:drawableTint="@drawable/custom_rb_color"
-                        android:background="@drawable/custom_rb_selector"/>
+                        android:drawableTint="@drawable/custom_rb_color" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_margin="4dp"
                         android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:drawableTop="@drawable/rb_dog"
-                        android:drawableTint="@drawable/custom_rb_color"
-                        android:background="@drawable/custom_rb_selector"/>
+                        android:drawableTint="@drawable/custom_rb_color" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_margin="4dp"
                         android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:drawableTop="@drawable/rb_parrot"
-                        android:drawableTint="@drawable/custom_rb_color"
-                        android:background="@drawable/custom_rb_selector"/>
+                        android:drawableTint="@drawable/custom_rb_color" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_margin="4dp"
                         android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
                         android:button="@color/transparent"
                         android:drawableTop="@drawable/rb_chameleon"
-                        android:drawableTint="@drawable/custom_rb_color"
-                        android:background="@drawable/custom_rb_selector"/>
-
+                        android:drawableTint="@drawable/custom_rb_color" />
                 </LinearLayout>
 
+                <EditText
+                    android:id="@+id/tfAmical"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/custom_tf_stroke"
+                    android:ems="10"
+                    android:hint="@string/msg_entente"
+                    android:inputType="text|textMultiLine"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llAmical" />
 
+                <TextView
+                    android:id="@+id/lb_bio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="28dp"
+                    android:text="A propos de votre aniaml de compagnie"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tfAmical" />
+
+                <EditText
+                    android:id="@+id/tfBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/custom_tf_stroke"
+                    android:ems="10"
+                    android:hint="Saisissez ici une description de votre animal"
+                    android:inputType="text|textMultiLine"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lb_bio" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cvFormulaire2"
+            android:id="@+id/cvFormulaireGarde"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="15dp"
             app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="15dp">
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <TextView
+                    android:id="@+id/infos_garde"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/informations_pour_la_garde"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/infos_garde" />
+
+                <TextView
+                    android:id="@+id/lbNvEnergie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/niveau_d_nergie"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                <RadioGroup
+                    android:id="@+id/rgNvEnergie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbNvEnergie">
+
+                    <RadioButton
+                        android:id="@+id/rbNVeleve"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
+                        android:button="@color/transparent"
+                        android:text="@string/lev"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
+
+                    <RadioButton
+                        android:id="@+id/rbNVmodere"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
+                        android:button="@color/transparent"
+                        android:text="@string/mod_r"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
+
+                    <RadioButton
+                        android:id="@+id/rbNVfaible"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
+                        android:button="@color/transparent"
+                        android:text="@string/faible"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/lbHeureRepas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/horaires_des_repas"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rgNvEnergie" />
+
+                <RadioGroup
+                    android:id="@+id/rgHoraireRepas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbHeureRepas">
+
+                    <RadioButton
+                        android:id="@+id/rbHRmatin"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
+                        android:button="@color/transparent"
+                        android:text="@string/le_matin"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
+
+                    <RadioButton
+                        android:id="@+id/rbHR2xParJour"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
+                        android:button="@color/transparent"
+                        android:text="@string/_2_fois_par_jour"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
+
+                    <RadioButton
+                        android:id="@+id/rbHRsoir"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
+                        android:button="@color/transparent"
+                        android:textColor="@drawable/custom_rb_textcolor"
+                        android:text="@string/le_soir"
+                        android:textAlignment="center" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/lbSeul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/peut_tre_laiss_seul"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rgHoraireRepas" />
+
+                <RadioGroup
+                    android:id="@+id/rgSeul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbSeul">
+
+                    <RadioButton
+                        android:id="@+id/rbSeulMoins1h"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
+                        android:button="@color/transparent"
+                        android:text="@string/_1_heure"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
+
+                    <RadioButton
+                        android:id="@+id/rbSeul1a4h"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
+                        android:button="@color/transparent"
+                        android:text="@string/_1_4_heures"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
+
+                    <RadioButton
+                        android:id="@+id/rbSeul4a8h"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_rb_selector"
+                        android:button="@color/transparent"
+                        android:text="@string/_4_8_heures"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/custom_rb_textcolor" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/lbMedicament"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/prend_il_des_m_dicaments"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rgSeul" />
+
+                <EditText
+                    android:id="@+id/tfMedicament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/custom_tf_stroke"
+                    android:ems="10"
+                    android:hint="@string/msg_medic"
+                    android:inputType="text|textMultiLine"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbMedicament" />
+
+                <TextView
+                    android:id="@+id/lbInfosGarde"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/informations_compl_mentaires"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tfMedicament" />
+
+                <EditText
+                    android:id="@+id/tfInfosGarde"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/custom_tf_stroke"
+                    android:ems="10"
+                    android:hint="@string/msg_garde"
+                    android:inputType="text|textMultiLine"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbInfosGarde" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/Palette3_4"
+            android:text="Enregistrer" />
+
     </LinearLayout>
 </ScrollView>

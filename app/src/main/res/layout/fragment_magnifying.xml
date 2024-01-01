@@ -11,14 +11,49 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:text="Bonjour "
+                android:fontFamily="@font/work_sans_light"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/lbUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Jane"
+                android:textColor="@color/Bleu8"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/lb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text=" !"
+                android:fontFamily="@font/work_sans_light"
+                android:textSize="26sp" />
+
+        </LinearLayout>
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/btDevenirGardien"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="28dp"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="18dp"
             app:cardElevation="7dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -40,13 +75,14 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/dog_beachball"
                     app:tint="@color/white" />
 
                 <TextView
                     android:id="@+id/infoProfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="10dp"
                     android:text="@string/publierdispo"
                     android:textColor="@color/white"
                     android:textSize="21sp"
@@ -83,27 +119,20 @@
             android:id="@+id/titleAR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="top"
             android:layout_marginStart="15dp"
-            android:paddingTop="10dp"
+            android:layout_marginTop="40dp"
+            android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:text="@string/trouver_un_gardien"
-            android:textColor="@color/black"
-            android:textSize="20dp"
+            android:hint="@string/trouver_un_gardien"
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/arRecyclerView"
+            android:id="@+id/paRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginBottom="1dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/titleAR" />
-
     </LinearLayout>
 
 </FrameLayout>

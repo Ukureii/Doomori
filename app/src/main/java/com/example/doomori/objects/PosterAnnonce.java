@@ -4,12 +4,13 @@ import android.graphics.drawable.Icon;
 import android.widget.ImageView;
 
 public class PosterAnnonce {
-    protected String title, subtitle;
+    protected String title, subtitle, desc;
     protected int icon;
 
-    public PosterAnnonce(String title, String subtitle, int icon) {
+    public PosterAnnonce(String title, String subtitle, String desc, int icon) {
         this.title = title;
         this.subtitle = subtitle;
+        this.desc = desc;
         this.icon = icon;
     }
 
@@ -25,6 +26,8 @@ public class PosterAnnonce {
     public void setSubtitle(String newSubtitle) {
         this.subtitle = newSubtitle;
     }
+    public String getDesc() { return desc; }
+    public void setDesc(String desc) { this.desc = desc; }
     public int getIcon() {
         return icon;
     }

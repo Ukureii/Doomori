@@ -11,12 +11,24 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
+        <TextView
+            android:id="@+id/lb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            android:text="Mon profil"
+            android:fontFamily="@font/work_sans_light"
+            android:textSize="26sp" />
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:layout_marginTop="-28dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="28dp"
-            app:cardCornerRadius="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="18dp"
             app:cardElevation="7dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -32,8 +44,8 @@
                     android:id="@+id/settingIcon"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
                     android:src="@drawable/setting"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -43,28 +55,55 @@
                     android:id="@+id/picProfil"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:padding="3dp"
                     android:src="@drawable/outline_account_circle_24"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:tint="@color/white" />
 
                 <TextView
-                    android:id="@+id/infoProfil"
+                    android:id="@+id/infoProfilPrenom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:gravity="center"
-                    android:text="Prenom Nom"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Jane"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/picProfil"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/infoProfilNom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Doe"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/infoProfilPrenom"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/infoProfilDateInscr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Lorem ipsum dolor sit amet."
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/work_sans_light"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/picProfil" />
+                    app:layout_constraintStart_toEndOf="@+id/picProfil"
+                    app:layout_constraintTop_toBottomOf="@+id/infoProfilPrenom" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
